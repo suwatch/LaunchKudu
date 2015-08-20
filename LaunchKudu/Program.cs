@@ -141,7 +141,7 @@ namespace LaunchKudu
 
             using (var client = new HttpClient(handler))
             {
-                using (var response = await client.GetAsync("http://observer/api/Sites/" + siteName))
+                using (var response = await client.GetAsync("https://observer/api/Sites/" + siteName))
                 {
                     response.EnsureSuccessStatusCode();
                     var result = await response.Content.ReadAsAsync<SiteInfo[]>();
